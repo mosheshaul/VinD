@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/mosheshaul/vind
+  tag: dev
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30080
+
+database:
+  port: "3306"
+  name: "vinddb"
+  user: "vinduser"
+  password: "vindpass"
+
+mysql:
+  auth:
+    rootPassword: "rootpass"
+    database: "vinddb"
+    username: "vinduser"
+    password: "vindpass"
