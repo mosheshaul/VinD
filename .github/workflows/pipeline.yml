@@ -44,7 +44,7 @@ jobs:
 
       # Install vcluster CLI (vind uses vcluster + docker driver)
       - name: Setup vcluster
-        uses: loft-sh/setup-vcluster@v1.0.0
+        uses: loft-sh/setup-vcluster@v0.0.1
 
       - name: Create vind cluster (vcluster docker driver)
         run: |
